@@ -8,8 +8,9 @@ const puppeteer = require('puppeteer');
 // Configuration
 // NOTE: If you get "Signature verification failed" error, your authorization token has expired.
 // Get a fresh token from your browser's Network tab when making the API request.
-const API_URL = "https://harkiratapi.classx.co.in/get/fetchVideoDetailsById?course_id=14&video_id=3645&ytflag=0&folder_wise_course=1&linked_course_id=&lc_app_api_url=";
-const HEADERS = {
+//const API_URL = "https://harkiratapi.classx.co.in/get/fetchVideoDetailsById?course_id=14&video_id=3645&ytflag=0&folder_wise_course=1&linked_course_id=&lc_app_api_url=";
+const API_URL = "https://parmaracademyapi.cloudflare.net.in//get/fetchVideoDetailsById?course_id=49&folder_wise_course=0&ytflag=0&video_id=6867";
+const HEADERS1 = {
   "accept": "*/*",
   "auth-key": "appxapi",
   "authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjI0NzkwIiwiZW1haWwiOiJiaGFyYXRoc3VidTIwMDJAZ21haWwuY29tIiwidGltZXN0YW1wIjoxNzYwMjk0NTI4LCJ0ZW5hbnRUeXBlIjoidXNlciIsInRlbmFudE5hbWUiOiJoYXJraXJhdF9kYiIsInRlbmFudElkIjoiIiwiZGlzcG9zYWJsZSI6ZmFsc2V9.1C2sxSky2IfibmG4DmEyKt4bC40Amkm0CoOjLinHo3k",
@@ -19,7 +20,14 @@ const HEADERS = {
   "origin": "https://harkirat.classx.co.in",
   "referer": "https://harkirat.classx.co.in/"
 };
-
+const HEADERS = {
+  "auth-key": "appxapi",
+  "authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjM4OTMxMiIsImVtYWlsIjoidmFpYmhhdjI4NjZAZ21haWwuY29tIiwidGltZXN0YW1wIjoxNzQ3ODQzMDI0LCJ0ZW5hbnRUeXBlIjoidXNlciIsInRlbmFudE5hbWUiOiJwYXJtYXJhY2FkZW15X2RiIiwidGVuYW50SWQiOiIiLCJkaXNwb3NhYmxlIjpmYWxzZX0.uAXB30Dy7kBEfnqVrL1GrhbsA1OSXYD5XxYeo-n1bak",
+  "accept-encoding": "gzip, deflate, br",
+  "accept-language": "en-US,en;q=0.9",
+  "Device-Type": "android",
+  "Device-Details": "Xiaomi_Redmi_7_SDK-32"
+};
 // Fetch video details from API (same style as fetch.js)
 async function fetchVideoDetails() {
   console.log('\n========== STEP 1: Fetching Video Details ==========');
