@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer');
 // Configuration
 // NOTE: If you get "Signature verification failed" error, your authorization token has expired.
 // Get a fresh token from your browser's Network tab when making the API request.
-const API_URL = "https://harkiratapi.classx.co.in/get/fetchVideoDetailsById?course_id=14&video_id=3645&ytflag=0&folder_wise_course=1&linked_course_id=&lc_app_api_url=";
+const API_URL = "https://harkiratapi.classx.co.in/get/fetchVideoDetailsById?course_id=14&video_id=3513&ytflag=0&folder_wise_course=1&linked_course_id=&lc_app_api_url=";
 const HEADERS = {
   "accept": "*/*",
   "auth-key": "appxapi",
